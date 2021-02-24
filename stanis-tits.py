@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 __author__ = 'Alexander Popov'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __license__ = 'Unlicense'
 
 DOWNLOAD_DIR = './images'
@@ -54,7 +54,7 @@ def getImagesLinks(page):
 
 
 def imageDownload(image):
-    response = requests.get('https://blog.stanis.ru/img/{0}'.format(image,),
+    response = requests.get('https://blog.stanis.ru/imgs/{0}'.format(image,),
                             stream=True)
 
     with open('{0}/{1}'.format(DOWNLOAD_DIR, image),
